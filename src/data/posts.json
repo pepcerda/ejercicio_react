@@ -1,0 +1,39 @@
+   {"posts": [
+    {
+        "title": "Título 1", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "Josep"
+    }, 
+    {  
+        "title": "Título 2", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "John Doe"
+    }, 
+    {
+        "title": "Título 3", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "Víctor"
+    }, 
+    {
+        "title": "Título 4", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "Gabriela"
+    }, 
+    {
+        "title": "Título 5", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "Ainoa"
+    }, 
+    {
+        "title": "Título 6", 
+        "img": "https://picsum.photos/286/180", 
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "owner": "Ferran"
+    }
+   ]
+}

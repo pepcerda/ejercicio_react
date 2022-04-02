@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+*{
+    font-family: 'Fredoka', sans-serif;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#posts h5{
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#posts button{
+    border: 1px solid rgba(var(--bs-danger-rgb),var(--bs-text-opacity)) !important;
+    /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+    box-shadow: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#posts button:focus{
+    background-color: none; 
 }
 
-.App-link {
-  color: #61dafb;
+.creador {
+    font-size: .8rem; 
+    color: #a8a7a7;
+    margin:0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.liked {
+    color: red; 
+}
+
+.imagen-perfil{
+    border-radius: 50%;
+}
+
+.aficiones li{
+    list-style: circle;
+}
+
+.card a{
+    font-size: .8rem; 
+}
+
+
+#botonFavs{
+    max-width: 20rem;
+}
+@media only screen and (min-width: 768px){
+    .form-posts {
+        width: 33% !important;
+        position:fixed;  
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .texto{
+        height: 15vh;
+    }
+
+    .imagen-perfil {
+        width: 45% !important; 
+        
+    }
 }
