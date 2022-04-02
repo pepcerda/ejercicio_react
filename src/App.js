@@ -1,31 +1,74 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/navbar';
-import Post from './components/post';
+import PostsList from './components/postsList';
 import Search from './components/search';
-import data from './data/posts.json'; 
+import Profile from './components/profile';
+import data from './data/posts.json';
+import Spinner from './components/spinner';
 
-function App() {
- 
+class App extends React.Component {
+  postsData = data.posts; 
+  perfil = {
+    avatar: "/pexels-andrea-piacquadio-733872.jpg",
+    username: "jcerdar", 
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum tellus tempor, tempus est eu."
+  }
+  state = {
+    busca: "", 
+    pagina: "I",
+    posts: this.postsData, 
+    showPosts: false
+  };
 
-  return (
-    <div className="App">
-      <Navbar />
-      <div className='container mt-3'>
-        <Search />
+  changePage(newPage) {
+    this.setState({
+      pagina: newPage
+    })
+  }
+
+  buscar(str) {
+    this.setState({
+      busca: str
+    }) 
+  }
+
+  componentDidMount() {
+    setTimeout(this.postsCargadas.bind(this), 3000); 
+  }
+
+  postsCargadas() {
+    this.setState({
+      showPosts: true
+    })
+  }
+
+  render() {
+    console.log(this.state.posts); 
+    return (
+      <div className="App">
+        <Navbar 
+          onClickLogo={(paginaActiva) => {
+            if(paginaActiva){
+              this.changePage("I"); 
+            }
+          }}
+          onClickPerfil={(paginaActiva) => {
+            if(paginaActiva){
+              this.changePage("P");
+            }
+          }}
+          
+          />
+        {this.state.pagina === "P" ? <Profile avatar={this.perfil.avatar} 
+        username={this.perfil.username}
+        bio={this.perfil.bio}/> : null}
+        {this.state.pagina === "I" ? <Search onSearch={(str) => {
+          this.buscar(str);
+        }}/> : null}
+        {(this.state.pagina === "I" && this.state.showPosts)? <PostsList posts={this.state.posts} busca={this.state.busca}/> : <Spinner />}
       </div>
-      <div id="posts" className="row mt-5 mx-2">
-        {data.posts.map((post, i) => (
-            <div className="col-12 col-md-4 mb-2" key={i}>
-            <Post 
-              title={post.title}
-              img={post.img}
-              descripcion={post.descripcion.slice(0, 100)}
-              owner={post.owner}
-              />
-            </div>
-        ))}
-      </div>
-    </div>
-  );
+    );
+  }
 }
 export default App;

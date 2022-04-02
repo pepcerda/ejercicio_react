@@ -1,39 +1,111 @@
    {"posts": [
     {
+        "id":1,
         "title": "Título 1", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "Josep"
-    }, 
-    {  
-        "title": "Título 2", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "John Doe"
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
     }, 
     {
-        "title": "Título 3", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "Víctor"
+        "id":2,
+        "title": "Título 1", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
     }, 
     {
-        "title": "Título 4", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "Gabriela"
+        "id":3,
+        "title": "Título 1", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
     }, 
     {
-        "title": "Título 5", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "Ainoa"
+        "id":4,
+        "title": "Título 1", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
     }, 
     {
-        "title": "Título 6", 
-        "img": "https://picsum.photos/286/180", 
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
-        "owner": "Ferran"
+        "id":5,
+        "title": "Título 1", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    },  
+    {
+        "id":6,
+        "title": "Título 1", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    }, 
+    {
+        "id":7,
+        "title": "Campañas", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    }, 
+    {
+        "id":8,
+        "title": "Campaña", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    }, 
+    {
+        "id":9,
+        "title": "Campaña", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    }, 
+    {
+        "id":10,
+        "title": "Campaña", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    }, 
+    {
+        "id":11,
+        "title": "Campaña", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
+    },  
+    {
+        "id":12,
+        "title": "Campaña", 
+        "image": "https://picsum.photos/286/180", 
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a mi dolor. Fusce quis lectus ornare, posuere velit vel, suscipit.",
+        "autor": "Josep", 
+        "comments": "14",
+        "createdAt": "27/01/2022"
     }
    ]
 }
