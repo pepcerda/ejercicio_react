@@ -6,6 +6,7 @@ import Search from './components/search';
 import Profile from './components/profile';
 import data from './data/posts.json';
 import Spinner from './components/spinner';
+import Login from './components/login';
 
 class App extends React.Component {
   postsData = data.posts; 
@@ -18,7 +19,8 @@ class App extends React.Component {
     busca: "", 
     pagina: "I",
     posts: this.postsData, 
-    showPosts: false
+    showPosts: false, 
+    loginOk: false
   };
 
   changePage(newPage) {
@@ -43,10 +45,16 @@ class App extends React.Component {
     })
   }
 
+  autenticar(bool) {
+    this.setState({
+      loginOk: bool
+    })
+  }
+
+
   render() {
-    console.log(this.state.posts); 
-    return (
-      <div className="App">
+      if(this.state.loginOk) {
+        return ( <div className="App">
         <Navbar 
           onClickLogo={(paginaActiva) => {
             if(paginaActiva){
@@ -67,8 +75,21 @@ class App extends React.Component {
           this.buscar(str);
         }}/> : null}
         {(this.state.pagina === "I" && this.state.showPosts)? <PostsList posts={this.state.posts} busca={this.state.busca}/> : <Spinner />}
-      </div>
-    );
+      </div> );
+      } else {
+        console.log("entro aqui"); 
+        return (
+          <Login onLoginComplete={(bool) => {
+            console.log(bool); 
+            this.autenticar(bool)}}/>
+        );
+        
+      }
+
+
+
+     
+   
   }
 }
 export default App;
