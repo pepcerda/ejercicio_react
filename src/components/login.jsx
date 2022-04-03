@@ -9,7 +9,6 @@ class Login extends React.Component {
 
 
     handleLogin(event) {
-        console.log("Llego aquí");
         event.preventDefault();
 
         //pasar auth
@@ -19,26 +18,31 @@ class Login extends React.Component {
         }
 
         //llamada al servicio
-        let loginOk = login(body);
-
-        if (loginOk) {
-            this.setState(() => {
-                return {
-                    error: !loginOk
-                };
-            }, () => {
-                this.props.onLoginComplete(loginOk);
-            });
-
-        }
+        login(body)
+            .then((response) => {
+                if (response.data.token) {
+                    localStorage.setItem("token", response.data.token); 
+                    this.setState(() => {
+                        return {
+                            error: true
+                        };
+                    }, () => {
+                        this.props.onLoginComplete(true);
+                    });
+                }
+            }).catch(() => {
+                this.setState({
+                    error: true
+                })
+            })
     }
-
     render() {
-        return ( 
+        return (
             <div className="d-flex flex-column align-items-center justify-content-center login">
-                {this.state.error ? <div className="bg-danger"><span>
-                    Usuario o contraseña incorrectos.
-                </span></div> : null}
+                {this.state.error ?  
+                    <div className="mb-1 text-center login-validation">
+                        <span>Usuario o contraseña incorrectos.</span>
+                    </div>: null}
                 <form onSubmit={(event) => this.handleLogin(event)}>
                     <h1 className="text-center mt-2">Login</h1>
                     <div className="mb-3">

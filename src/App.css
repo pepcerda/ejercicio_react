@@ -54,7 +54,7 @@ html, body {
     border: 1px solid #e5e5e5;
     border-radius: 5%; 
     width: 15em; 
-    height: 20em;
+    height: 25em;
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -66,6 +66,13 @@ html, body {
 
 .btnLogin {
     width: 100%; 
+}
+
+.login-validation{
+    color: rgb(168, 18, 18); 
+    width: 80% !important; 
+    border:1px solid rgba(168, 18, 18, 0.363); 
+    background-color: rgba(194, 72, 72, 0.39);
 }
 
 @media only screen and (min-width: 576px){

@@ -77,10 +77,8 @@ class App extends React.Component {
         {(this.state.pagina === "I" && this.state.showPosts)? <PostsList posts={this.state.posts} busca={this.state.busca}/> : <Spinner />}
       </div> );
       } else {
-        console.log("entro aqui"); 
         return (
           <Login onLoginComplete={(bool) => {
-            console.log(bool); 
             this.autenticar(bool)}}/>
         );
         
