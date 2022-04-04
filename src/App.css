@@ -58,7 +58,7 @@ html, body {
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    margin-top: -12em;
+    margin-top: -10em;
     margin-left: -7.5em; 
     -webkit-box-shadow: 0px 0px 9px -1px #000000; 
     box-shadow: 0px 0px 9px -1px #000000;

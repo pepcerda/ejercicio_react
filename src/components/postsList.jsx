@@ -1,28 +1,28 @@
 import React from 'react';
 import Post from './post';
 
-class PostsList extends React.Component {
+function PostsList ({posts, busca, onLoginFailure}) {
 
-    render() {
-        return (
-            <div id="posts" className="row mt-5 mx-2">
-                {this.props.posts
-                    .filter((post) => post.title.includes(this.props.busca))
-                    .map((post) => (
-                        <div className="col-12 col-md-4 mb-2" key={post.id}>
-                            <Post
-                                title={post.title}
-                                image={post.image}
-                                text={post.text.slice(0, 100)}
-                                autor={post.autor}
-                                createdAt={post.createdAt}
-                                comments={post.comments}
-                            />
-                        </div>
-                    ))}
-            </div>
-        )
-    }
+    return (
+        <div id="posts" className="row mt-5 mx-2">
+            {posts
+                .filter((post) => post.text.includes(busca))
+                .map((post) => (
+                    <div className="col-12 col-md-4 mb-2" key={post.id}>
+                        <Post
+                            id= {post.id}
+                            image={post.image}
+                            text={post.text.slice(0, 100)}
+                            author={post.author.name}
+                            createdAt={post.createdAt.split('T')[0]}
+                            comments={post.comments.length}
+                            likes={post.likes}
+                            onLoginFailure={onLoginFailure}
+                        />
+                    </div>
+                ))}
+        </div>
+    );
 }
 
 export default PostsList; 
